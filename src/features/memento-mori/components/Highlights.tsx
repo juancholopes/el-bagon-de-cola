@@ -20,7 +20,7 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
         <div className="space-y-6">
           <p
             className="text-2xl italic leading-relaxed text-neutral-600"
-            style={{ fontFamily: "Instrument Serif" }}
+            style={{ fontFamily: "Vina Sans" }}
           >
             Has vivido{" "}
             <span
@@ -42,7 +42,7 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
             <div className="flex justify-between items-end border-b border-neutral-50 pb-2">
               <span
                 className="text-lg italic text-neutral-500"
-                style={{ fontFamily: "Instrument Serif" }}
+                style={{ fontFamily: "Vina Sans" }}
               >
                 Días de experiencia acumulada:
               </span>
@@ -56,7 +56,7 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
             <div className="flex justify-between items-end border-b border-neutral-50 pb-2">
               <span
                 className="text-lg italic text-neutral-500"
-                style={{ fontFamily: "Instrument Serif" }}
+                style={{ fontFamily: "Vina Sans" }}
               >
                 Estaciones observadas:
               </span>
@@ -70,7 +70,7 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
             <div className="flex justify-between items-end border-b border-neutral-50 pb-2">
               <span
                 className="text-lg italic text-neutral-500"
-                style={{ fontFamily: "Instrument Serif" }}
+                style={{ fontFamily: "Vina Sans" }}
               >
                 Latidos de tu corazón aprox:
               </span>
@@ -84,7 +84,7 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
             <div className="flex justify-between items-end border-b border-neutral-50 pb-2">
               <span
                 className="text-lg italic text-neutral-500"
-                style={{ fontFamily: "Instrument Serif" }}
+                style={{ fontFamily: "Vina Sans" }}
               >
                 Respiraciones tomadas:
               </span>
@@ -110,7 +110,7 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
           </div>
           <p
             className="text-2xl italic leading-relaxed opacity-90"
-            style={{ fontFamily: "Instrument Serif" }}
+            style={{ fontFamily: "Vina Sans" }}
           >
             {stats.stillLivingWithParents ? (
               <>

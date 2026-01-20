@@ -22,7 +22,7 @@ export const SocialContext = React.memo(({ stats }: SocialContextProps) => {
       <div className="space-y-6">
         <p
           className="text-xl italic text-neutral-600 leading-relaxed"
-          style={{ fontFamily: "Instrument Serif" }}
+          style={{ fontFamily: "Vina Sans" }}
         >
           Desde tu nacimiento, la humanidad ha crecido de{" "}
           <span
@@ -43,7 +43,7 @@ export const SocialContext = React.memo(({ stats }: SocialContextProps) => {
         <div className="p-8 rounded-lg space-y-4">
           <p
             className="text-lg italic text-neutral-500"
-            style={{ fontFamily: "Instrument Serif" }}
+            style={{ fontFamily: "Vina Sans" }}
           >
             Has conocido aproximadamente a:
           </p>
@@ -62,7 +62,7 @@ export const SocialContext = React.memo(({ stats }: SocialContextProps) => {
         </div>
         <p
           className="text-lg italic text-neutral-500 leading-relaxed"
-          style={{ fontFamily: "Instrument Serif" }}
+          style={{ fontFamily: "Vina Sans" }}
         >
           Han ocurrido{" "}
           <span
