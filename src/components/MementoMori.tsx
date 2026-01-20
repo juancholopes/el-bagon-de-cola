@@ -61,27 +61,21 @@ const MementoMori = () => {
           );
         });
 
-        // Animación de los círculos individuales del week grid cuando entran al viewport
-        const weekItems = containerRef.current?.querySelectorAll(".week-grid-item");
-        if (weekItems && weekItems.length > 0) {
+        // Animación optimizada del week grid por grupos de filas
+        const weekContainer = containerRef.current?.querySelector(".week-grid-container");
+        if (weekContainer) {
+          // Animar el contenedor completo con un simple fade-in
           gsap.fromTo(
-            weekItems,
+            weekContainer,
             {
-              scale: 0,
               opacity: 0,
             },
             {
-              scale: 1,
               opacity: 1,
-              duration: 0.3,
-              stagger: {
-                amount: 1.5,
-                from: "start",
-                grid: "auto",
-              },
-              ease: "back.out(1.2)",
+              duration: 0.6,
+              ease: "power2.out",
               scrollTrigger: {
-                trigger: ".week-grid-container",
+                trigger: weekContainer,
                 start: "top 70%",
                 once: true,
               },
