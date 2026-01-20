@@ -34,13 +34,6 @@ const MementoMori = () => {
   useGSAP(
     () => {
       if (isCalculated) {
-        // Fade-in general del contenedor
-        gsap.from(containerRef.current, {
-          opacity: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        });
-
         // Animaciones SplitText SOLO para elementos visibles en viewport
         const splitElements = gsap.utils.toArray(".split-animate");
 
@@ -58,30 +51,38 @@ const MementoMori = () => {
               y: 0,
               duration: 0.4,
               ease: "power2.out",
-              stagger: 0.01, // Reducido de 0.02 a 0.01
+              stagger: 0.01,
               scrollTrigger: {
                 trigger: el as HTMLElement,
                 start: "top 80%",
-                once: true, // Solo animar una vez
+                once: true,
               },
             }
           );
         });
 
-        // Animación simplificada del week grid - sin stagger para mejorar performance
-        const weekContainer = containerRef.current?.querySelector(".week-grid-container");
-        if (weekContainer) {
+        // Animación de los círculos individuales del week grid cuando entran al viewport
+        const weekItems = containerRef.current?.querySelectorAll(".week-grid-item");
+        if (weekItems && weekItems.length > 0) {
           gsap.fromTo(
-            weekContainer,
-            { opacity: 0, scale: 0.95 },
+            weekItems,
             {
-              opacity: 1,
+              scale: 0,
+              opacity: 0,
+            },
+            {
               scale: 1,
-              duration: 0.6,
-              ease: "power2.out",
+              opacity: 1,
+              duration: 0.3,
+              stagger: {
+                amount: 1.5,
+                from: "start",
+                grid: "auto",
+              },
+              ease: "back.out(1.2)",
               scrollTrigger: {
-                trigger: weekContainer,
-                start: "top 80%",
+                trigger: ".week-grid-container",
+                start: "top 70%",
                 once: true,
               },
             }
