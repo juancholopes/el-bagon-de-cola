@@ -61,22 +61,24 @@ const MementoMori = () => {
           );
         });
 
-        // Animación optimizada del week grid por grupos de filas
+        // El contenedor de la grilla se anima con un slide up suave
+        // mientras los círculos aparecen de manera desordenada con CSS
         const weekContainer = containerRef.current?.querySelector(".week-grid-container");
         if (weekContainer) {
-          // Animar el contenedor completo con un simple fade-in
           gsap.fromTo(
             weekContainer,
             {
               opacity: 0,
+              y: 30,
             },
             {
               opacity: 1,
-              duration: 0.6,
+              y: 0,
+              duration: 0.8,
               ease: "power2.out",
               scrollTrigger: {
                 trigger: weekContainer,
-                start: "top 70%",
+                start: "top 80%",
                 once: true,
               },
             }

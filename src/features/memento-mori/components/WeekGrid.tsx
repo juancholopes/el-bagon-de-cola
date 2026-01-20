@@ -28,6 +28,11 @@ export const WeekGrid = React.memo(({ stats }: WeekGridProps) => {
     });
   }, [stats.livedWeeks]);
 
+  // Precalcular delays aleatorios para la animación
+  const animationDelays = useMemo(() => {
+    return Array.from({ length: TOTAL_WEEKS }, () => Math.random() * 0.8);
+  }, []);
+
   return (
     <section className="space-y-10 pt-16 animate-in">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -77,15 +82,17 @@ export const WeekGrid = React.memo(({ stats }: WeekGridProps) => {
         className="week-grid-container grid gap-0.5 sm:gap-1"
         style={{
           gridTemplateColumns: `repeat(${WEEKS_IN_YEAR}, minmax(0, 1fr))`,
-          willChange: "opacity, transform", // Optimización para animaciones
         }}
       >
         {weekStyles.map((style, i) => (
           <div
             key={i}
             data-week-index={i}
-            className={`week-grid-item aspect-square rounded-full border-2 ${style}`}
-            style={{ willChange: "transform" }}
+            className={`week-grid-item aspect-square rounded-full border-2 ${style} animate-circle-appear`}
+            style={{
+              animationDelay: `${animationDelays[i]}s`,
+              opacity: 0,
+            }}
             title={`Semana ${i + 1}`}
           />
         ))}
