@@ -26,7 +26,7 @@ export const BirthDateForm = ({
           </h1>
           <p
             className="text-2xl italic text-neutral-500 tracking-wide"
-            style={{ fontFamily: "Ephesis" }}
+            style={{ fontFamily: "Instrument Serif" }}
           >
             visualiza tus semanas restantes de vida
           </p>
@@ -35,7 +35,7 @@ export const BirthDateForm = ({
         <div className="bg-white/60 backdrop-blur-sm border-2 border-neutral-100 p-10 space-y-8 shadow-lg">
           <p
             className="text-xl italic text-neutral-600 leading-relaxed"
-            style={{ fontFamily: "Ephesis" }}
+            style={{ fontFamily: "Instrument Serif" }}
           >
             En promedio, un ser humano vive alrededor de{" "}
             <span

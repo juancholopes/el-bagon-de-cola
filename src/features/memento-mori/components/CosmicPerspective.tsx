@@ -25,7 +25,7 @@ export const CosmicPerspective = React.memo(({ stats }: CosmicPerspectiveProps) 
           <div className="space-y-6">
             <p
               className="text-2xl italic leading-relaxed opacity-80"
-              style={{ fontFamily: "Ephesis" }}
+              style={{ fontFamily: "Instrument Serif" }}
             >
               Desde tu nacimiento, la Tierra ha viajado aproximadamente:
             </p>
@@ -45,7 +45,7 @@ export const CosmicPerspective = React.memo(({ stats }: CosmicPerspectiveProps) 
           <div className="space-y-6">
             <p
               className="text-2xl italic leading-relaxed opacity-80"
-              style={{ fontFamily: "Ephesis" }}
+              style={{ fontFamily: "Instrument Serif" }}
             >
               Nuestro sistema solar se ha movido en la Vía Láctea:
             </p>
@@ -67,7 +67,7 @@ export const CosmicPerspective = React.memo(({ stats }: CosmicPerspectiveProps) 
         <div className="pt-12 text-center space-y-4">
           <p
             className="text-2xl italic opacity-60 max-w-2xl mx-auto"
-            style={{ fontFamily: "Ephesis" }}
+            style={{ fontFamily: "Instrument Serif" }}
           >
             Toda tu vida es solo el{" "}
             <span

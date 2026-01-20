@@ -24,7 +24,7 @@ export const StatsHeader = React.memo(({ stats }: StatsHeaderProps) => {
         </p>
         <p
           className="text-xl italic text-neutral-500"
-          style={{ fontFamily: "Ephesis" }}
+          style={{ fontFamily: "Instrument Serif" }}
         >
           semanas consumidas
         </p>
@@ -44,7 +44,7 @@ export const StatsHeader = React.memo(({ stats }: StatsHeaderProps) => {
         </p>
         <p
           className="text-xl italic text-neutral-500"
-          style={{ fontFamily: "Ephesis" }}
+          style={{ fontFamily: "Instrument Serif" }}
         >
           semanas por vivir
         </p>
@@ -64,7 +64,7 @@ export const StatsHeader = React.memo(({ stats }: StatsHeaderProps) => {
         </p>
         <p
           className="text-xl italic text-neutral-500"
-          style={{ fontFamily: "Ephesis" }}
+          style={{ fontFamily: "Instrument Serif" }}
         >
           del total estimado
         </p>
