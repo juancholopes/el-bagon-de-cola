@@ -32,15 +32,23 @@ export const useLifeStats = (birthDate: string): Stats | null => {
     const deathsSinceBirth = Math.round(livedDays * 165000);
 
     // Cálculo del tiempo restante con los padres
+    const LIVING_WITH_PARENTS_AGE = 18; // Edad hasta la que vives con tus padres
     const parentAge = yearsLived + PARENT_AVG_AGE_DIFF;
     const parentYearsLeft = Math.max(0, PARENT_LIFE_EXPECTANCY - parentAge);
-    const totalWeeksWithParents =
-      yearsLived * VISITS_PER_YEAR + parentYearsLeft * VISITS_PER_YEAR;
-    const weeksAlreadySpent = yearsLived * VISITS_PER_YEAR;
-    const parentTimePercentage =
-      totalWeeksWithParents > 0
-        ? ((weeksAlreadySpent / totalWeeksWithParents) * 100).toFixed(0)
-        : "100";
+    
+    // Si aún no te has mudado (< 18 años)
+    const yearsUntilMovingOut = Math.max(0, LIVING_WITH_PARENTS_AGE - yearsLived);
+    const parentYearsAfterMovingOut = Math.max(0, parentYearsLeft - yearsUntilMovingOut);
+    
+    // Visitas solo cuentan DESPUÉS de mudarte
+    const yearsSinceMovedOut = Math.max(0, yearsLived - LIVING_WITH_PARENTS_AGE);
+    const visitsAlreadyDone = yearsSinceMovedOut * VISITS_PER_YEAR;
+    const visitsFutureTotal = parentYearsAfterMovingOut * VISITS_PER_YEAR;
+    const totalVisitsPossible = visitsAlreadyDone + visitsFutureTotal;
+    
+    const parentTimePercentage = totalVisitsPossible > 0
+      ? ((visitsAlreadyDone / totalVisitsPossible) * 100).toFixed(0)
+      : "0";
 
     // Cálculo de población mundial
     const birthYear = birth.getFullYear();
@@ -68,6 +76,8 @@ export const useLifeStats = (birthDate: string): Stats | null => {
       redwoodPercentage: ((yearsLived / 3000) * 100).toFixed(2),
       parentTimePercentage,
       parentYearsLeft: Math.round(parentYearsLeft),
+      visitsFutureTotal: Math.round(visitsFutureTotal),
+      stillLivingWithParents: yearsLived < LIVING_WITH_PARENTS_AGE,
       populationAtBirth,
       currentPopulation,
     };

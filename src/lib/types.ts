@@ -20,6 +20,8 @@ export interface Stats {
   redwoodPercentage: string;
   parentTimePercentage: string;
   parentYearsLeft: number;
+  visitsFutureTotal: number;
+  stillLivingWithParents: boolean;
   populationAtBirth: number;
   currentPopulation: number;
 }

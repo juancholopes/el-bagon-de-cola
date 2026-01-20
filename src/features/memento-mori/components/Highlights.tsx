@@ -112,25 +112,37 @@ export const Highlights = React.memo(({ stats }: HighlightsProps) => {
             className="text-2xl italic leading-relaxed opacity-90"
             style={{ fontFamily: "Instrument Serif" }}
           >
-            {stats.parentYearsLeft > 0 ? (
+            {stats.stillLivingWithParents ? (
               <>
-                "Si ves a tus padres solo dos semanas al año, ya has vivido
+                "Aún vives con tus padres y disfrutas de su compañía a diario.
+                Cuando te mudes (~18 años), te quedarán aproximadamente{" "}
+                <span
+                  className="text-3xl text-amber-300 not-italic font-bold"
+                  style={{ fontFamily: "Emilys Candy" }}
+                >
+                  {stats.visitsFutureTotal}
+                </span>
+                {" "}semanas de visitas con ellos en toda tu vida. Aprovecha este tiempo."
+              </>
+            ) : stats.parentYearsLeft > 0 ? (
+              <>
+                "Si ves a tus padres solo dos semanas al año, ya has consumido
                 aproximadamente el{" "}
                 <span
                   className="text-3xl text-red-400 not-italic font-bold"
                   style={{ fontFamily: "Emilys Candy" }}
                 >
                   {stats.parentTimePercentage}%
-                </span>{" "}
-                del tiempo total que tendrás con ellos. Te quedan
+                </span>
+                {" "}del tiempo total de visitas que tendrás con ellos. Te quedan
                 aproximadamente{" "}
                 <span
                   className="text-3xl text-amber-300 not-italic font-bold"
                   style={{ fontFamily: "Emilys Candy" }}
                 >
-                  {stats.parentYearsLeft}
-                </span>{" "}
-                años con tus padres. No ignores el presente."
+                  {stats.visitsFutureTotal}
+                </span>
+                {" "}semanas más con tus padres. No ignores el presente."
               </>
             ) : (
               "El tiempo es el recurso más valioso. Aprovecha cada momento con quienes amas."
