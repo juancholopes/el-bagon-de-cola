@@ -16,7 +16,7 @@ export const Glossary = () => {
           </h4>
           <p
             className="text-xl italic text-neutral-600 leading-relaxed"
-            style={{ fontFamily: "Instrument Serif" }}
+            style={{ fontFamily: "Ephesis" }}
           >
             {m.text}
           </p>

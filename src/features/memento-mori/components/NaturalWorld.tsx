@@ -30,7 +30,7 @@ export const NaturalWorld = React.memo(({ stats }: NaturalWorldProps) => {
             </p>
             <p
               className="text-sm italic text-emerald-700"
-              style={{ fontFamily: "Instrument Serif" }}
+              style={{ fontFamily: "Ephesis" }}
             >
               ciclos lunares
             </p>
@@ -44,7 +44,7 @@ export const NaturalWorld = React.memo(({ stats }: NaturalWorldProps) => {
             </p>
             <p
               className="text-sm italic text-blue-700"
-              style={{ fontFamily: "Instrument Serif" }}
+              style={{ fontFamily: "Ephesis" }}
             >
               vueltas al sol
             </p>
@@ -52,7 +52,7 @@ export const NaturalWorld = React.memo(({ stats }: NaturalWorldProps) => {
         </div>
         <p
           className="text-xl italic text-neutral-600 leading-relaxed"
-          style={{ fontFamily: "Instrument Serif" }}
+          style={{ fontFamily: "Ephesis" }}
         >
           Tu edad actual representa el{" "}
           <span
@@ -65,7 +65,7 @@ export const NaturalWorld = React.memo(({ stats }: NaturalWorldProps) => {
         </p>
         <p
           className="text-lg italic text-neutral-500 leading-relaxed"
-          style={{ fontFamily: "Instrument Serif" }}
+          style={{ fontFamily: "Ephesis" }}
         >
           Tu cuerpo ha reemplazado casi todas sus células varias veces. No eres
           la misma materia con la que naciste.

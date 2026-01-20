@@ -10,7 +10,7 @@ export const Footer = () => {
       </div>
       <p
         className="text-5xl italic text-neutral-400 max-w-3xl mx-auto leading-tight"
-        style={{ fontFamily: "Instrument Serif" }}
+        style={{ fontFamily: "Ephesis" }}
       >
         "la vida es un parpadeo en la escala cósmica. úsalo para lo que
         realmente importa."

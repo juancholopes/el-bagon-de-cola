@@ -18,7 +18,7 @@ export const UniversalScale = React.memo(({ stats }: UniversalScaleProps) => {
           </h2>
           <p
             className="text-xl italic opacity-70 max-w-3xl mx-auto"
-            style={{ fontFamily: "Instrument Serif" }}
+            style={{ fontFamily: "Ephesis" }}
           >
             La inmensidad del cosmos pone en perspectiva nuestra existencia
           </p>
@@ -41,7 +41,7 @@ export const UniversalScale = React.memo(({ stats }: UniversalScaleProps) => {
             </p>
             <p
               className="text-lg italic opacity-80"
-              style={{ fontFamily: "Instrument Serif" }}
+              style={{ fontFamily: "Ephesis" }}
             >
               de años luz de diámetro observable
             </p>
@@ -63,7 +63,7 @@ export const UniversalScale = React.memo(({ stats }: UniversalScaleProps) => {
             </p>
             <p
               className="text-lg italic opacity-80"
-              style={{ fontFamily: "Instrument Serif" }}
+              style={{ fontFamily: "Ephesis" }}
             >
               de años desde el Big Bang
             </p>
@@ -85,7 +85,7 @@ export const UniversalScale = React.memo(({ stats }: UniversalScaleProps) => {
             </p>
             <p
               className="text-lg italic opacity-80"
-              style={{ fontFamily: "Instrument Serif" }}
+              style={{ fontFamily: "Ephesis" }}
             >
               de la edad del universo
             </p>
@@ -95,7 +95,7 @@ export const UniversalScale = React.memo(({ stats }: UniversalScaleProps) => {
         <div className="p-8 md:p-12 rounded-lg">
           <p
             className="text-2xl md:text-3xl italic leading-relaxed text-center opacity-90"
-            style={{ fontFamily: "Instrument Serif" }}
+            style={{ fontFamily: "Ephesis" }}
           >
             "La luz tarda{" "}
             <span
