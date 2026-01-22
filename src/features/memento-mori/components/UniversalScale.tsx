@@ -7,8 +7,8 @@ interface UniversalScaleProps {
 
 export const UniversalScale = React.memo(({ stats }: UniversalScaleProps) => {
   return (
-    <section className="p-12 md:p-20 rounded-lg overflow-hidden relative animate-in">
-      <div className="relative z-10 space-y-12">
+          <section className="p-12 md:p-20 rounded-lg overflow-hidden relative animate-in">
+            <div className="relative z-10 space-y-12 border border-gray-300 bg-linear-to-b from-white/60 via-white/40 to-white/20 backdrop-blur-lg p-8 md:p-12 rounded-lg">
         <div className="text-center space-y-4">
           <h2
             className="text-6xl tracking-widest text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-400 to-amber-400"
